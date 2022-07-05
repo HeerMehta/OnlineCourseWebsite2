@@ -1,1 +1,1 @@
-web: gunicorn onlinecourselist.wsgi --log-file -
+web: gunicorn onlinecourses.wsgi --log-file -

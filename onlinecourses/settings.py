@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django.conf',
     'rest_framework',
-    'import_export',
+    'django-import_export',
     'courselist'
 ]
 

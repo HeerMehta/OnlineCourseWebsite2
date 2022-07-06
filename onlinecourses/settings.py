@@ -32,12 +32,11 @@ ALLOWED_HOSTS = ['127.0.0.1','onlinecoursebackend.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.staticfiles',
-    'django.contrib.staticfilescorsheaders',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    # 'django.contrib.staticfiles',
     'corsheaders',
     'django.conf',
     'rest_framework',
@@ -49,6 +48,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django.contrib.staticfilescorsheaders',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -129,6 +129,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'courselist\static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

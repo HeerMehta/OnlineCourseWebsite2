@@ -31,13 +31,15 @@ ALLOWED_HOSTS = ['127.0.0.1','onlinecoursebackend.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django.contrib.staticfiles',
+    'django.contrib.staticfilescorsheaders',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.conf',
+    'django.contrib.staticfiles'
     'corsheaders',
+    'django.conf',
     'rest_framework',
     'import_export',
     'courselist'
